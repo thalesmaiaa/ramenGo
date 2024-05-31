@@ -31,4 +31,5 @@ public class AuthInterceptor implements HandlerInterceptor {
     private Boolean doesHeaderValueDiffers(String value) {
         return !apiKey.equals(value);
     }
+
 }

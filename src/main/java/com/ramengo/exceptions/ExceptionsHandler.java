@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-
 @ControllerAdvice
 public class ExceptionsHandler extends ResponseEntityExceptionHandler {
 
@@ -46,12 +45,5 @@ public class ExceptionsHandler extends ResponseEntityExceptionHandler {
         ExceptionMessage messages = new ExceptionMessage("could not place order");
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(messages);
     }
-
-//    @ExceptionHandler(Exception.class)
-//    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-//    private ResponseEntity<ExceptionMessage> handleGenericException() {
-//        ExceptionMessage messages = new ExceptionMessage("could not place order");
-//        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(messages);
-//    }
 
 }

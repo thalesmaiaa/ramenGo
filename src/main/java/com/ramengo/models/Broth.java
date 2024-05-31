@@ -22,6 +22,5 @@ public class Broth {
     private String name;
     private String description;
     private Integer price;
+
 }
-
-
