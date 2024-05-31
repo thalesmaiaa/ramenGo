@@ -2,7 +2,6 @@ package com.ramengo.controllers;
 
 import com.ramengo.models.Broth;
 import com.ramengo.services.BrothService;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,9 +12,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/broths")
 public class BrothController {
-
-    @Value("${x-api-key}")
-    String apiKey;
 
     private final BrothService brothService;
 

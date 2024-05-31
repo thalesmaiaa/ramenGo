@@ -3,7 +3,6 @@ package com.ramengo.controllers;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.ramengo.dtos.OrderDTO;
 import com.ramengo.services.OrderService;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,9 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/orders")
 public class OrdersController extends AbstractController {
-
-    @Value("${x-api-key}")
-    String apiKey;
 
     private final OrderService orderService;
 
